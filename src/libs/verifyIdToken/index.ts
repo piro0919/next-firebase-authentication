@@ -2,7 +2,6 @@ import { ParsedUrlQuery } from "querystring";
 import axios from "axios";
 import admin from "firebase-admin";
 import { DecodedIdToken } from "firebase-admin/lib/auth/token-verifier";
-import "libs/admin";
 import {
   GetServerSidePropsContext,
   NextApiRequest,
@@ -10,6 +9,7 @@ import {
   PreviewData,
 } from "next";
 import { parseCookies, setCookie } from "nookies";
+import "../admin";
 
 export type VerifyIdTokenArgs =
   | GetServerSidePropsContext<ParsedUrlQuery, PreviewData>
@@ -22,7 +22,7 @@ export type VerifyIdToken = DecodedIdToken & {
   idToken: string;
 };
 
-async function verifyIdToken({
+export async function verifyIdToken({
   req,
   res,
 }: VerifyIdTokenArgs): Promise<VerifyIdToken> {

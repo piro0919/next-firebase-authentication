@@ -16,5 +16,5 @@
     "strictNullChecks": false,
     "target": "es5"
   },
-  "include": ["./src/index.ts"]
+  "include": ["./src/index.ts", "./src/verifyIdToken.ts"]
 }

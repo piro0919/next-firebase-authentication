@@ -1,5 +1,5 @@
 import { getAuth } from "firebase/auth";
-import app from "libs/app";
+import app from "../app";
 
 const auth = getAuth(app);
 

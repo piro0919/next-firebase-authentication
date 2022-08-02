@@ -1,16 +1,16 @@
 import { getRedirectResult, UserCredential } from "firebase/auth";
-import useUser from "hooks/useUser";
-import auth from "libs/auth";
 import { setCookie, destroyCookie } from "nookies";
 import { useEffect, useState } from "react";
 import { useBoolean } from "usehooks-ts";
+import auth from "../../libs/auth";
+import useUser from "../useUser";
 
 export type InitAuth = {
   isSignedIn: boolean;
   userCredential?: UserCredential;
 };
 
-function useInitAuth(): InitAuth {
+export function useInitAuth(): InitAuth {
   const { user } = useUser();
   const [userCredential, setUserCredential] = useState<UserCredential>();
   const { setValue: setIsSignedIn, value: isSignedIn } = useBoolean();

@@ -5,7 +5,7 @@
 ## Example
 
 - [Demo](https://next-firebase-authentication.kk-web.link)
-- [Source code](https://github.com/piro0919/next-firebase-authentication)
+- [Source code](https://github.com/piro0919/next-firebase-authentication/tree/main/src/pages)
 
 ## Getting Started
 
@@ -44,7 +44,7 @@ FIREBASE_PROJECT_ID="..."
 `_app.tsx`
 
 ```tsx
-import useInitAuth from "hooks/useInitAuth";
+import { useInitAuth } from "next-firebase-authentication";
 import type { AppProps } from "next/app";
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
@@ -97,6 +97,12 @@ It is a function that does verify for id token.
 Can be used with `getServerSideProps` and `api`.
 
 It is also possible to use indirectly from `middleware`.
+
+Please write as follows when using.
+
+```tsx
+import { verifyIdToken } from "next-firebase-authentication/dist/verifyIdToken";
+```
 
 ## License
 

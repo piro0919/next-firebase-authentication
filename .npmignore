@@ -17,4 +17,5 @@ package-lock.json
 public
 renovate.json
 src
+tsconfig.gen-dts.json
 tsconfig.json

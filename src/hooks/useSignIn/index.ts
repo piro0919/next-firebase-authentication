@@ -1,9 +1,9 @@
 import { signInWithRedirect } from "firebase/auth";
-import auth from "libs/auth";
-import facebookAuthProvider from "libs/facebookAuthProvider";
-import googleAuthProvider from "libs/googleAuthProvider";
-import twitterAuthProvider from "libs/twitterAuthProvider";
 import { useCallback } from "react";
+import auth from "../../libs/auth";
+import facebookAuthProvider from "../../libs/facebookAuthProvider";
+import googleAuthProvider from "../../libs/googleAuthProvider";
+import twitterAuthProvider from "../../libs/twitterAuthProvider";
 
 export type SignIn = {
   signInWithFacebook: () => void;
@@ -11,7 +11,7 @@ export type SignIn = {
   signInWithTwitter: () => void;
 };
 
-function useSignIn(): SignIn {
+export function useSignIn(): SignIn {
   const signInWithFacebook = useCallback(() => {
     signInWithRedirect(auth, facebookAuthProvider);
   }, []);
