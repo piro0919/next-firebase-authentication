@@ -1,0 +1,1 @@
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../src/hooks/useInitAuth/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAqB,cAAc,EAAE,MAAM,eAAe,CAAC;AAOlE,oBAAY,QAAQ,GAAG;IACrB,UAAU,EAAE,OAAO,CAAC;IACpB,cAAc,CAAC,EAAE,cAAc,CAAC;CACjC,CAAC;AAEF,iBAAS,WAAW,IAAI,QAAQ,CA2C/B;AAED,eAAe,WAAW,CAAC"}
