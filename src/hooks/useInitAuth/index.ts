@@ -11,11 +11,15 @@ export type InitAuth = {
 };
 
 export function useInitAuth(): InitAuth {
-  const { user } = useUser();
+  const { isLoading, user } = useUser();
   const [userCredential, setUserCredential] = useState<UserCredential>();
   const { setValue: setIsSignedIn, value: isSignedIn } = useBoolean();
 
   useEffect(() => {
+    if (isLoading) {
+      return;
+    }
+
     if (user) {
       user.getIdToken().then((idToken) => {
         const { refreshToken } = user;
@@ -37,7 +41,7 @@ export function useInitAuth(): InitAuth {
 
     destroyCookie(null, "idToken", { path: "/" });
     destroyCookie(null, "refreshToken", { path: "/" });
-  }, [user]);
+  }, [isLoading, user]);
 
   useEffect(() => {
     getRedirectResult(auth).then((userCredential) => {

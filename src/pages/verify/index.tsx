@@ -23,7 +23,9 @@ function Verify({ signInProvider }: VerifyProps): JSX.Element {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
+export const getServerSideProps: GetServerSideProps<VerifyProps> = async (
+  ctx
+) => {
   try {
     const {
       firebase: { sign_in_provider: signInProvider },
