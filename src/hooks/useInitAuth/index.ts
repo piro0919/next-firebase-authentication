@@ -1,7 +1,6 @@
 import { getRedirectResult, UserCredential } from "firebase/auth";
 import { setCookie, destroyCookie } from "nookies";
-import { useEffect, useState } from "react";
-import { useBoolean } from "usehooks-ts";
+import { useEffect, useMemo, useState } from "react";
 import auth from "../../libs/auth";
 import useUser from "../useUser";
 
@@ -13,7 +12,10 @@ export type InitAuth = {
 export function useInitAuth(): InitAuth {
   const { isLoading, user } = useUser();
   const [userCredential, setUserCredential] = useState<UserCredential>();
-  const { setValue: setIsSignedIn, value: isSignedIn } = useBoolean();
+  const isSignedIn = useMemo(
+    () => !!user && !!userCredential,
+    [user, userCredential]
+  );
 
   useEffect(() => {
     if (isLoading) {
@@ -48,10 +50,6 @@ export function useInitAuth(): InitAuth {
       setUserCredential(userCredential || undefined);
     });
   }, []);
-
-  useEffect(() => {
-    setIsSignedIn(!!user && !!userCredential);
-  }, [setIsSignedIn, user, userCredential]);
 
   return {
     isSignedIn,
