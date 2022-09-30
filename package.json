@@ -9,7 +9,7 @@
     "firebase-admin": "11.0.1",
     "nookies": "2.5.2",
     "react-firebase-hooks": "5.0.3",
-    "usehooks-ts": "2.7.1"
+    "usehooks-ts": "2.7.2"
   },
   "devDependencies": {
     "@commitlint/cli": "17.1.2",
