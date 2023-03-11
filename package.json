@@ -19,7 +19,7 @@
     "@types/react-dom": "18.0.11",
     "@typescript-eslint/eslint-plugin": "5.54.1",
     "@vespaiach/axios-fetch-adapter": "0.3.1",
-    "eslint": "8.35.0",
+    "eslint": "8.36.0",
     "eslint-config-google": "0.14.0",
     "eslint-config-next": "12.3.4",
     "eslint-config-prettier": "8.7.0",
