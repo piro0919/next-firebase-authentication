@@ -5,8 +5,8 @@
   },
   "dependencies": {
     "axios": "0.27.2",
-    "firebase": "9.19.1",
-    "firebase-admin": "11.6.0",
+    "firebase": "9.20.0",
+    "firebase-admin": "11.7.0",
     "nookies": "2.5.2",
     "react-firebase-hooks": "5.1.1",
     "usehooks-ts": "2.9.1"
