@@ -4,7 +4,7 @@
     "url": "https://github.com/piro0919/next-firebase-authentication/issues"
   },
   "dependencies": {
-    "axios": "0.30.0",
+    "axios": "1.11.0",
     "firebase": "9.23.0",
     "firebase-admin": "11.11.1",
     "nookies": "2.5.2",
