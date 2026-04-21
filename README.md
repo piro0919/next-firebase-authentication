@@ -4,7 +4,7 @@
 
 ## Example
 
-- [Demo](https://next-firebase-authentication.kk-web.link)
+- [Demo](https://next-firebase-authentication.kkweb.io)
 - [Source code](https://github.com/piro0919/next-firebase-authentication/tree/main/src/pages)
 
 ## Getting Started
