@@ -1,3 +1,12 @@
+
+> ## ⚠️ Deprecated
+>
+> This package is deprecated and no longer maintained.
+>
+> Firebase Auth SDK v9+ and Next.js App Router patterns have changed significantly since 2022. See the [Firebase Auth documentation](https://firebase.google.com/docs/auth) and the [Next.js docs](https://nextjs.org/docs) for modern integration patterns.
+
+---
+
 ## Overview
 
 `next-firebase-authentication` makes it easy to connect Next.js to Firebase Authentication.
